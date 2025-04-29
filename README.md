@@ -267,13 +267,13 @@ graph LR
     MainNode -->|"Serialize/Validate (Task)"| ServerNode;
     ServerNode -->|"HTTP Response (201 Created)"| Client;
 
-    %% Styles for clarity %%
-    style Client fill:#c9f,stroke:#333,stroke-width:2px;
-    style ServerNode fill:#f9d,stroke:#333,stroke-width:2px;
-    style MainNode fill:#adf,stroke:#333,stroke-width:2px;
-    style CrudNode fill:#dfa,stroke:#333,stroke-width:2px;
-    style DatabaseNode fill:#fdc,stroke:#333,stroke-width:2px;
-    style ModelsNode fill:#ffc,stroke:#333,stroke-width:2px;
+    %% Styles for clarity - Added 'color' for text visibility %%
+    style Client fill:#c9f,stroke:#333,stroke-width:2px,color:#000;
+    style ServerNode fill:#f9d,stroke:#333,stroke-width:2px,color:#000;
+    style MainNode fill:#adf,stroke:#333,stroke-width:2px,color:#000;
+    style CrudNode fill:#dfa,stroke:#333,stroke-width:2px,color:#000;
+    style DatabaseNode fill:#fdc,stroke:#333,stroke-width:2px,color:#000;
+    style ModelsNode fill:#ffc,stroke:#333,stroke-width:2px,color:#000;
 
 ```
 
