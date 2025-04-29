@@ -72,7 +72,7 @@ Emphasis on:
 3.  **Correctness & Reliability:** Validated via Pytest, Mypy, Ruff.
 4.  **Developer Experience:** Auto-docs, fast feedback loops.
 5.  **Testability:** Facilitated by dependency injection.
-6.  **Automation:** CI/CD (GitHub Actions) for quality checks.
+
 
 Consider this repository a practical guide and template for applying these principles to Python API development.
 
