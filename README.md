@@ -256,23 +256,23 @@ Understanding the interaction between modules is key.
 
 ```mermaid
 graph LR
-    Client -->|HTTP Request (e.g., POST /tasks/)| Server(Uvicorn/FastAPI);
-    Server -->|Route Match, Validate (TaskCreate)| Main(main.py @app.post);
-    Main -->|Call CRUD Function| Crud(crud.py create_task);
-    Main -->|Request DB Handle| Database(database.py get_db);
-    Database -->|Yield In-Memory Dict| Crud;
-    Crud -->|Create Model, Store in Dict| Models(models.Task);
-    Models -->|Return Created Task Model| Crud;
-    Crud -->|Return Task Model| Main;
-    Main -->|Serialize/Validate (Task)| Server;
-    Server -->|HTTP Response (201 Created)| Client;
+    Client -->|"HTTP Request (e.g., POST /tasks/)"| ServerNode["Server (Uvicorn/FastAPI)"];
+    ServerNode -->|"Route Match, Validate (TaskCreate)"| MainNode["Main (main.py @app.post)"];
+    MainNode -->|"Call CRUD Function"| CrudNode["Crud (crud.py create_task)"];
+    MainNode -->|"Request DB Handle"| DatabaseNode["Database (database.py get_db)"];
+    DatabaseNode -->|"Yield In-Memory Dict"| CrudNode;
+    CrudNode -->|"Create Model, Store in Dict"| ModelsNode["Models (models.Task)"];
+    ModelsNode -->|"Return Created Task Model"| CrudNode;
+    CrudNode -->|"Return Task Model"| MainNode;
+    MainNode -->|"Serialize/Validate (Task)"| ServerNode;
+    ServerNode -->|"HTTP Response (201 Created)"| Client;
 
     style Client fill:#c9f,stroke:#333,stroke-width:2px;
-    style Server fill:#f9d,stroke:#333,stroke-width:2px;
-    style Main fill:#adf,stroke:#333,stroke-width:2px;
-    style Crud fill:#dfa,stroke:#333,stroke-width:2px;
-    style Database fill:#fdc,stroke:#333,stroke-width:2px;
-    style Models fill:#ffc,stroke:#333,stroke-width:2px;
+    style ServerNode fill:#f9d,stroke:#333,stroke-width:2px;
+    style MainNode fill:#adf,stroke:#333,stroke-width:2px;
+    style CrudNode fill:#dfa,stroke:#333,stroke-width:2px;
+    style DatabaseNode fill:#fdc,stroke:#333,stroke-width:2px;
+    style ModelsNode fill:#ffc,stroke:#333,stroke-width:2px;
 
 ```
 
