@@ -267,6 +267,7 @@ graph LR
     MainNode -->|"Serialize/Validate (Task)"| ServerNode;
     ServerNode -->|"HTTP Response (201 Created)"| Client;
 
+    %% Styles for clarity %%
     style Client fill:#c9f,stroke:#333,stroke-width:2px;
     style ServerNode fill:#f9d,stroke:#333,stroke-width:2px;
     style MainNode fill:#adf,stroke:#333,stroke-width:2px;
