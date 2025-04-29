@@ -18,7 +18,7 @@
 ![Typing](https://img.shields.io/badge/typing-Mypy-blue.svg?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)
 ![Status](https://img.shields.io/badge/status-Active_Development/Demo-brightgreen.svg?style=flat-square)
-<a href="https://github.com/AayushBadola/TaskManager/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/AayushBadola/TaskManager/actions/workflows/ci.yml/badge.svg" alt="CI Pipeline Status"/></a>
+
 
 <br>
 
